@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int palin(int num)
+    {
+        long long int y=0;
+        while(num>0)
+        {
+            y=y*10+num%10;
+            num=num/10;
+        }
+        return y;
+    }
+    bool isPalindrome(int x) {
+        if(x<0)
+            return false;
+        
+        if(x==palin(x))
+            return true;
+        else
+            return false;
+        
+    }
+};
